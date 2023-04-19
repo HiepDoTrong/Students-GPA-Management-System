@@ -48,7 +48,7 @@ public class ViewAllStudent extends JFrame {
 		try {
 			con = DriverManager.getConnection("jdbc:mysql://localhost/quanlydiem", "root", "Phenikaa23@@@");
 			Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			ResultSet rs = stmt.executeQuery("SELECT id, st_name, email, address, phone FROM students");
+			ResultSet rs = stmt.executeQuery("SELECT id, st_name, email, address, phone, GPA FROM students");
 
 			ResultSetMetaData rsmd = rs.getMetaData();
 			int cols = rsmd.getColumnCount();
